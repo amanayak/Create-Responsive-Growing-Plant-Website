@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: "PT Serif", serif;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+	--main-color: #448802;
+	--second-color: #78af2f;
+	--black-color: #000000;
+	--white-color: #ffffff;
+	--h1-font: 3.5rem;
+	--p-font: 1.1rem;
+}
+body{
+	background: var(--white-color);
+	color: var(--text-color);
+	overflow: hidden;
+}
+
+.btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	font-size: var(--p-font);
+}
+
+header{
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 50px;
+	transition: all ease .55s;
+}
+
+.logo img{
+    width: 170px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--black-color);
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.search-bar input{
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 5px;
+}
+
+.search-bar i{
+    color: var(--main-color);
+}
+
+.grow-btn, 
+.donate-btn{
+    background: var(--main-color);
+    color: var(--white-color);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grow-btn:hover, 
+.donate-btn:hover{
+    transform: scale(1.1);
+    background-color: var(--second-color);
+}
+
+.grow-btn i, 
+.donate-btn i{
+    font-size: var(--p-font);
+}
+
+.menu-icon{
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    height: 100vh;
+    background-color: var(--white-color);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.sidebar ul li{
+    margin: 15px 0;
+}
+
+.sidebar ul li a{
+    color: var(--main-color);
+    font-size: var(--p-font);
+}
+
+.sidebar ul li a:hover{
+    color: var(--black-color);
+}
+
+.sidebar.show{
+    left: 0;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px;
+    height: 100vh;
+    position: relative;
+    flex-wrap: ;
+}
+
+.hero-text{
+    max-width: 40%;
+    margin-left: 100px;
+}
+
+.hero-text h1{
+    font-size: var(--h1-font);
+    color: var(--black-color);
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span{
+    font-weight: bolder;
+    color: var(--main-color);
+}
+
+.hero-text p{
+    font-size: var(--p-font);
+    color: var(--black-color);
+    margin-bottom: 20px;
+}
+
+.video-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.video-btn i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--main-color);
+    border-radius: 50%;
+    color: var(--white-color);
+    font-size: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-btn span{
+    font-size: 16px;
+    color: var(--black-color);
+    font-weight: bold;
+}
+
+.banner-link{
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-link a{
+    color: var(--black-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: color .3s ease;
+}
+
+.banner-link a:hover{
+    color: var(--main-color);
+}
+
+.plant-container{
+    position: relative;
+    width: 300px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img{
+    width: calc(80px + 120px);
+    height: auto;
+    margin: -40px 470px 0 0;
+    flex-shrink: 0;
+}
+
+.hero-img img{
+    width: 200%;
+    height: auto;
+}
+
+.plant{
+    position: absolute;
+    top: 280px;
+    left: -100px;
+    width: 240px;
+    height: 240px;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/044/763/476/small_2x/bush-with-luscious-green-leaves-isolated-green-leaves-from-a-forest-plant-isolated-forest-green-plant-top-view-png.png);
+    background-size: cover;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: opacity 0.5s, transform 1s ease-in-out;
+}
+
+.plant.grow{
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.leaf{
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 690px;
+    height: 690px;
+    background-image: url(https://png.pngtree.com/png-clipart/20210418/original/pngtree-cartoon-cute-thin-leaf-leaves-fall-png-image_6227800.png);
+    background-size: cover;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: opacity 0.5s, transform 1s ease-in-out;
+}
+
+.leaf.grow{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.butterfly{
+    position: absolute;
+    top: 200px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    background-image: url(https://giffiles.alphacoders.com/864/86495.gif);
+    background-size: cover;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: opacity 0.5s, transform 1s ease-in-out;
+    animation: butterflyMovement1 6s ease-in-out infinite;
+}
+
+.butterfly.grow{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.butterfly1{
+    position: absolute;
+    top: 300px;
+    left: -150px;
+    width: 120px;
+    height: 120px;
+    background-image: url(https://i.pinimg.com/originals/d7/0b/9b/d70b9bcf575f8ca592c19a7685b86920.gif);
+    background-size: cover;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: opacity 0.5s, transform 1s ease-in-out;
+    animation: butterflyMovement2 6s ease-in-out infinite;
+}
+
+.butterfly1.grow{
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes butterflyMovement1{
+    0%{
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25%{
+        transform: translate(50px, -50px) rotate(30deg);
+    }
+    50%{
+        transform: translate(100px, 0) rotate(60deg);
+    }
+    75%{
+        transform: translate(50px, 50px) rotate(90deg);
+    }
+    100%{
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes butterflyMovement2{
+    0%{
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25%{
+        transform: translate(-50px, 50px) rotate(-30deg);
+    }
+    50%{
+        transform: translate(-100px, 0) rotate(-60deg);
+    }
+    75%{
+        transform: translate(-50px, -50px) rotate(-90deg);
+    }
+    100%{
+        transform: translate(0, 0) rotate(0deg);
+    }
+}

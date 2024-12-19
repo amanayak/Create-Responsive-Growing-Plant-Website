@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>growing plant website</title>
+	<!-- css link -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- remix icon link -->
+	<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+	  <!-- GSAP Animation -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="logo.png">
+    </a>
+    <div class="navbar-right">
+      <div class="search-bar">
+        <i class="ri-search-line"></i>
+        <input type="text" name="text" placeholder="Search...">
+      </div>
+      <button class="btn grow-btn" onclick="toggleGrow()">
+        <i class="ri-plant-fill"></i>Grow Me
+      </button>
+      <button class="btn donate-btn">
+        <i class="ri-hand-coin-fill"></i>Donate Now
+      </button>
+      <i class="ri-menu-fold-2-line menu-icon" onclick="toggleMenu()"></i>
+    </div>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Aboute</a></li>
+      <li><a href="#">Donation</a></li>
+      <li><a href="#">Institute</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+	
+
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Together We can <span>GROW</span>Plants</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation.
+      </p>
+      <div class="video-btn">
+        <i class="ri-play-large-fill"></i>
+        <span>Watch Video</span>
+      </div>
+    </div>
+
+    <div class="banner-link">
+      <a href="#"><i class="ri-facebook-line"></i></a>
+      <a href="#"><i class="ri-instagram-line"></i></a>
+      <a href="#"><i class="ri-twitter-line"></i></a>
+      <a href="#"><i class="ri-whatsapp-line"></i></a>
+    </div>
+
+    <div class="plant-container">
+      <div class="hero-img">
+        <img src="img.png" alt="hero Image">
+      </div>
+
+      <div class="plant" id="plant"></div>
+      <div class="leaf" id="leaf"></div>
+      <div class="butterfly" id="butterfly"></div>
+      <div class="butterfly1" id="butterfly1"></div>
+    </div>
+  </section>
+
+
+
+ <!-- js link -->
+ <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
